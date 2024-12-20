@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/_10sdp"
+    android:background="@drawable/rounded_button_bg"
+    android:backgroundTint="@color/white"
+    android:elevation="@dimen/_7sdp"
+    android:layout_marginTop="@dimen/_3sdp"
+    android:layout_marginHorizontal="@dimen/_15sdp"
+    android:layout_marginBottom="@dimen/_10sdp">
+
+    <TextView
+        android:id="@+id/questionTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_medium"
+        android:text="Question 1: What was the takeaway from this video?"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"/>
+
+
+    <TextView
+        android:id="@+id/option1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_regular"
+        android:text="A. You should foul more players"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sdp"
+        android:paddingVertical="@dimen/_7sdp"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:elevation="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:background="@drawable/rounded_white_bg"/>
+
+    <TextView
+        android:id="@+id/option2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_regular"
+        android:text="B. You should maintain composure"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sdp"
+        android:paddingVertical="@dimen/_7sdp"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:elevation="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:background="@drawable/rounded_white_bg"/>
+
+    <TextView
+        android:id="@+id/option3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_regular"
+        android:text="C. This is not your sport"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sdp"
+        android:paddingVertical="@dimen/_7sdp"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:elevation="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:background="@drawable/rounded_white_bg"/>
+
+    <TextView
+        android:id="@+id/option4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_regular"
+        android:text="D. Be considerate."
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sdp"
+        android:paddingVertical="@dimen/_7sdp"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:elevation="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:background="@drawable/rounded_white_bg"/>
+
+
+
+</LinearLayout>

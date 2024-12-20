@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:paddingHorizontal="@dimen/_15sdp"
+    android:paddingBottom="@dimen/_20sdp"
+    android:paddingTop="@dimen/_10sdp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_eleph"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:src="@drawable/iv_eleph"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="@color/blue"
+        android:fontFamily="@font/rubik_bold"
+        android:textSize="@dimen/_12sdp"
+        android:layout_marginStart="@dimen/_7sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_eleph"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_eleph"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/mainIV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:src="@drawable/splash_iv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_eleph" />
+
+    <TextView
+        android:id="@+id/headingTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_bold"
+        android:text="Mental Health in Sports"
+        android:textColor="@color/black_50"
+        android:textSize="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainIV" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_regular"
+        android:text="Discover how to gain the competative edge by strengthing your skill and mental strngth"
+        android:textColor="@color/gray_100"
+        android:textSize="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headingTV" />
+
+
+    <TextView
+        android:id="@+id/startTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="GET STARTED"
+        android:fontFamily="@font/rubik_medium"
+        android:textColor="@color/white"
+        android:padding="@dimen/_12sdp"
+        android:textSize="@dimen/_11sdp"
+        android:background="@drawable/rounded_button_bg"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

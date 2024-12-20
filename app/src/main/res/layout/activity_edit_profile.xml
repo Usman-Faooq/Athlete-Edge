@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".activities.EditProfileActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/homeAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55sdp"
+        android:background="@color/bg_color"
+        android:paddingHorizontal="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backIV"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:src="@drawable/ic_back_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik_bold"
+            android:text="Profile"
+            android:textColor="@color/gray_100"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/backIV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/backIV" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/shadow_iv"
+        app:layout_constraintTop_toBottomOf="@+id/homeAppBar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeAppBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:paddingVertical="@dimen/_15sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:fontFamily="@font/rubik_medium"
+                android:gravity="center"
+                android:text="Email"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp" />
+
+            <EditText
+                android:id="@+id/emailET"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:background="@drawable/rounded_edittext_bg"
+                android:fontFamily="@font/rubik_regular"
+                android:hint="Enter your email"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColor="@color/black_50"
+                android:textSize="@dimen/_11sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:paddingHorizontal="@dimen/_10sdp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_medium"
+                    android:text="Current Email: "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp"/>
+
+                <TextView
+                    android:id="@+id/currentEmailTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_medium"
+                    android:text="example@example.com"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:fontFamily="@font/rubik_medium"
+                android:gravity="center"
+                android:text="Name"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:background="@drawable/rounded_edittext_bg"
+                android:fontFamily="@font/rubik_regular"
+                android:hint="Enter your name"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColor="@color/black_50"
+                android:textSize="@dimen/_11sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:paddingHorizontal="@dimen/_10sdp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_medium"
+                    android:text="Current Name: "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp"/>
+
+                <TextView
+                    android:id="@+id/currentNameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_medium"
+                    android:text="John Doe"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:fontFamily="@font/rubik_medium"
+                android:gravity="center"
+                android:text="Password *"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:background="@drawable/rounded_edittext_bg"
+                android:paddingHorizontal="@dimen/_10sdp">
+
+                <EditText
+                    android:id="@+id/passwordET"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_38sdp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/rubik_regular"
+                    android:hint="Enter new Password"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:textColor="@color/black_50"
+                    android:textSize="@dimen/_11sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:src="@drawable/icon_eye_cross"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_medium"
+                android:text="Teams Associated"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="@color/black_50"
+                android:textSize="@dimen/_15sdp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/teamRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

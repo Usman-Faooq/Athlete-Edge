@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".activities.StatisticsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/homeAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55sdp"
+        android:background="@color/bg_color"
+        android:paddingHorizontal="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backIV"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:src="@drawable/ic_back_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik_bold"
+            android:text="Statistics"
+            android:textColor="@color/gray_100"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/backIV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/backIV" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/shadow_iv"
+        app:layout_constraintTop_toBottomOf="@+id/homeAppBar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeAppBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_medium"
+                android:text="This Week"
+                android:textColor="@color/black_50"
+                android:textSize="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/backIV"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/backIV" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:backgroundTint="@color/white"
+                android:background="@drawable/rounded_button_bg"
+                app:layout_constraintTop_toBottomOf="@+id/homeAppBar">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_bold"
+                    android:text="time spent"
+                    android:textColor="@color/gray_100"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_eleph"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/iv_eleph" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_bold"
+                    android:text="31.8 hours"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:textColor="@color/black_50"
+                    android:textSize="@dimen/_15sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_eleph"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/iv_eleph" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="7"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <abak.tr.com.boxedverticalseekbar.BoxedVertical
+                            android:layout_width="@dimen/_10sdp"
+                            android:layout_height="@dimen/_120sdp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            app:backgroundColor="@color/bg_color"
+                            app:progressColor="@color/blue"
+                            app:cornerRadius="@dimen/_20sdp"
+                            app:textEnabled="false"
+                            app:max="100"
+                            app:min="1"
+                            app:enabled="false"
+                            app:defaultValue="40"
+                            app:touchDisabled="false" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_bold"
+                            android:text="Mon"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:textColor="@color/black_50"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <abak.tr.com.boxedverticalseekbar.BoxedVertical
+                            android:layout_width="@dimen/_10sdp"
+                            android:layout_height="@dimen/_120sdp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            app:backgroundColor="@color/bg_color"
+                            app:progressColor="@color/blue"
+                            app:cornerRadius="@dimen/_20sdp"
+                            app:textEnabled="false"
+                            app:max="100"
+                            app:min="1"
+                            app:enabled="false"
+                            app:defaultValue="30"
+                            app:touchDisabled="false" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_bold"
+                            android:text="Tue"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:textColor="@color/black_50"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <abak.tr.com.boxedverticalseekbar.BoxedVertical
+                            android:layout_width="@dimen/_10sdp"
+                            android:layout_height="@dimen/_120sdp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            app:backgroundColor="@color/bg_color"
+                            app:progressColor="@color/blue"
+                            app:cornerRadius="@dimen/_20sdp"
+                            app:textEnabled="false"
+                            app:max="100"
+                            app:min="1"
+                            app:enabled="false"
+                            app:defaultValue="60"
+                            app:touchDisabled="false" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_bold"
+                            android:text="Wed"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:textColor="@color/black_50"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <abak.tr.com.boxedverticalseekbar.BoxedVertical
+                            android:layout_width="@dimen/_10sdp"
+                            android:layout_height="@dimen/_120sdp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            app:backgroundColor="@color/bg_color"
+                            app:progressColor="@color/blue"
+                            app:cornerRadius="@dimen/_20sdp"
+                            app:textEnabled="false"
+                            app:max="100"
+                            app:min="1"
+                            app:enabled="false"
+                            app:defaultValue="80"
+                            app:touchDisabled="false" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_bold"
+                            android:text="Thu"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:textColor="@color/black_50"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <abak.tr.com.boxedverticalseekbar.BoxedVertical
+                            android:layout_width="@dimen/_10sdp"
+                            android:layout_height="@dimen/_120sdp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            app:backgroundColor="@color/bg_color"
+                            app:progressColor="@color/blue"
+                            app:cornerRadius="@dimen/_20sdp"
+                            app:textEnabled="false"
+                            app:max="100"
+                            app:min="1"
+                            app:enabled="false"
+                            app:defaultValue="66"
+                            app:touchDisabled="false" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_bold"
+                            android:text="Fri"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:textColor="@color/black_50"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <abak.tr.com.boxedverticalseekbar.BoxedVertical
+                            android:layout_width="@dimen/_10sdp"
+                            android:layout_height="@dimen/_120sdp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            app:backgroundColor="@color/bg_color"
+                            app:progressColor="@color/blue"
+                            app:cornerRadius="@dimen/_20sdp"
+                            app:textEnabled="false"
+                            app:max="100"
+                            app:min="1"
+                            app:enabled="false"
+                            app:defaultValue="27"
+                            app:touchDisabled="false" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_bold"
+                            android:text="Sat"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:textColor="@color/black_50"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <abak.tr.com.boxedverticalseekbar.BoxedVertical
+                            android:layout_width="@dimen/_10sdp"
+                            android:layout_height="@dimen/_120sdp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            app:backgroundColor="@color/bg_color"
+                            app:progressColor="@color/blue"
+                            app:cornerRadius="@dimen/_50sdp"
+                            app:textEnabled="false"
+                            app:max="100"
+                            app:min="1"
+                            app:enabled="false"
+                            app:defaultValue="55"
+                            app:touchDisabled="false" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_bold"
+                            android:text="Sun"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:textColor="@color/black_50"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_medium"
+                android:text="My Performance"
+                android:textColor="@color/black_50"
+                android:textSize="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/backIV"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/backIV" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_9sdp"
+                android:backgroundTint="@color/white"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/rounded_button_bg">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="@dimen/_52sdp"
+                    android:layout_height="@dimen/_52sdp"
+                    android:src="@drawable/ic_book"
+                    android:padding="@dimen/_17sdp"
+                    android:background="@drawable/rounded_button_bg"
+                    android:backgroundTint="@color/blue_transparent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView4"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:fontFamily="@font/rubik_medium"
+                        android:gravity="start"
+                        android:text="TIME SPENT"
+                        android:textColor="@color/gray_100"
+                        android:textSize="@dimen/_10sdp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:fontFamily="@font/rubik_medium"
+                        android:gravity="start"
+                        android:maxLines="2"
+                        android:text="31.8 hours"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp"/>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_9sdp"
+                android:backgroundTint="@color/white"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/rounded_button_bg">
+
+                <ImageView
+                    android:id="@+id/imageView44"
+                    android:layout_width="@dimen/_52sdp"
+                    android:layout_height="@dimen/_52sdp"
+                    android:src="@drawable/ic_chart"
+                    android:padding="@dimen/_16sdp"
+                    android:background="@drawable/rounded_button_bg"
+                    android:backgroundTint="@color/orange_transparent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView44"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:fontFamily="@font/rubik_medium"
+                        android:gravity="start"
+                        android:text="AVERAGE/DAT"
+                        android:textColor="@color/gray_100"
+                        android:textSize="@dimen/_10sdp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:fontFamily="@font/rubik_medium"
+                        android:gravity="start"
+                        android:maxLines="2"
+                        android:text="4.6 hours"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp"/>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_9sdp"
+                android:backgroundTint="@color/white"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/rounded_button_bg">
+
+                <ImageView
+                    android:id="@+id/imageView444"
+                    android:layout_width="@dimen/_52sdp"
+                    android:layout_height="@dimen/_52sdp"
+                    android:src="@drawable/ic_check"
+                    android:padding="@dimen/_17sdp"
+                    android:background="@drawable/rounded_button_bg"
+                    android:backgroundTint="@color/green_transparent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView444"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:fontFamily="@font/rubik_medium"
+                        android:gravity="start"
+                        android:text="FINISHED COURSES"
+                        android:textColor="@color/gray_100"
+                        android:textSize="@dimen/_10sdp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:fontFamily="@font/rubik_medium"
+                        android:gravity="start"
+                        android:maxLines="2"
+                        android:text="12 Courses"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp"/>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:paddingHorizontal="@dimen/_15sdp"
+    android:paddingVertical="@dimen/_20sdp"
+    tools:context=".activities.EmailConfirmationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="19dp">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/app_logo" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/rubik_bold"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="Please Confirm"
+            android:textColor="@color/black_50"
+            android:textSize="@dimen/_23sdp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/rubik_regular"
+            android:gravity="center"
+            android:layout_marginHorizontal="@dimen/_40sdp"
+            android:text="Check your email to confirm. Once you do that, please come back to this screen"
+            android:textColor="@color/black_50"
+            android:textSize="@dimen/_12sdp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

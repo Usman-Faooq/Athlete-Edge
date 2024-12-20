@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".activities.DashBoardActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55sdp"
+        android:background="@color/bg_color"
+        android:paddingHorizontal="@dimen/_15sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/homeAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_eleph"
+                android:layout_width="@dimen/_37sdp"
+                android:layout_height="@dimen/_27sdp"
+                android:src="@drawable/iv_eleph"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:fontFamily="@font/rubik_bold"
+                android:text="@string/app_name"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_eleph"
+                app:layout_constraintEnd_toStartOf="@+id/iv_star"
+                app:layout_constraintStart_toEndOf="@+id/iv_eleph"
+                app:layout_constraintTop_toTopOf="@+id/iv_eleph" />
+
+            <ImageView
+                android:id="@+id/iv_star"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/ic_star"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/titleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_medium"
+                android:text="AppBar"
+                android:textColor="@color/gray_100"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_state"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/ic_state"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_filter"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/ic_filter"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/searchAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_39sdp"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:visibility="gone"
+            android:background="@drawable/rounded_edittext_bg_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/searchET"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:hint="Search Courses"
+                android:fontFamily="@font/rubik_regular"
+                android:textSize="@dimen/_12sdp"
+                android:textColorHint="@color/gray_100"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/searchIV2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/searchIV2"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:padding="@dimen/_6sdp"
+                android:src="@drawable/bottom_search_unselected"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/shadow_iv"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/navbarLayout"
+        app:layout_constraintTop_toBottomOf="@id/topBar" />
+
+
+    <ImageView
+        android:id="@+id/bottomShadowBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/shadow_iv"
+        android:rotation="180"
+        app:layout_constraintBottom_toTopOf="@+id/navbarLayout" />
+
+    <LinearLayout
+        android:id="@+id/navbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:background="@color/bg_color"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/homeLL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/homeIV"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:padding="@dimen/_4sdp"
+                android:src="@drawable/bottom_home_selected"/>
+
+            <TextView
+                android:id="@+id/homeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="@color/blue"
+                android:fontFamily="@font/rubik_medium"
+                android:textSize="@dimen/_10sdp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/searchLL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/searchIV"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:padding="@dimen/_6sdp"
+                android:src="@drawable/bottom_search_unselected"/>
+
+            <TextView
+                android:id="@+id/searchTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:textColor="@color/bottom_tint"
+                android:fontFamily="@font/rubik_medium"
+                android:textSize="@dimen/_10sdp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/courseLL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/courseIV"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:padding="@dimen/_6sdp"
+                android:src="@drawable/bottom_course_unselected"/>
+
+            <TextView
+                android:id="@+id/courseTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Courses"
+                android:textColor="@color/bottom_tint"
+                android:fontFamily="@font/rubik_medium"
+                android:textSize="@dimen/_10sdp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/saveLL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/saveIV"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:padding="@dimen/_6sdp"
+                android:src="@drawable/bottom_saved_unselected"/>
+
+            <TextView
+                android:id="@+id/saveTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saved"
+                android:textColor="@color/bottom_tint"
+                android:fontFamily="@font/rubik_medium"
+                android:textSize="@dimen/_10sdp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/profileLL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/profileIV"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:padding="@dimen/_6sdp"
+                android:src="@drawable/bottom_profile_unselected"/>
+
+            <TextView
+                android:id="@+id/profileTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textColor="@color/bottom_tint"
+                android:fontFamily="@font/rubik_medium"
+                android:textSize="@dimen/_10sdp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
